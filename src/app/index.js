@@ -1,4 +1,5 @@
 import Comentario from './Comentario';
-
+import './../css/style.css';
 const com = new Comentario();
-console.log(com.obtenerComentarios());
+com.obtenerComentarios();
+ 
