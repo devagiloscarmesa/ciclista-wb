@@ -4,10 +4,9 @@ class Comentario{
         try{
             let respuesta = await fetch('https://eonet.sci.gsfc.nasa.gov/api/v3/categories', {method: 'GET'});
             if(respuesta.status === 200){
-                console.log(respuesta);
                 let data = await respuesta.json();
                 let categories = data.categories;
-                console.log(categories);
+                return categories;
             }else{
                 alert("Error en el servidor!!!");
             }
