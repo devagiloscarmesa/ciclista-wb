@@ -7,7 +7,7 @@ async function main(){
     const com = new Comentario();
     let categorias = await com.obtenerComentarios();
     let html = '';
-    categorias.forEach(categorie => {
+    categorias.forEach(categorie => { 
         html += `<tr>
                     <td>${categorie.id}</td>
                     <td>${categorie.title}</td>
