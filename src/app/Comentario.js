@@ -15,7 +15,6 @@ class Comentario{
             }
 
         })
-        
         .catch( (response) => {
             console.log('Desde catch ',response);
         });
