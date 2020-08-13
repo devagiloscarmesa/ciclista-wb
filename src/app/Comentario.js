@@ -1,11 +1,23 @@
 class Comentario{
     
-    obtenerComentarios(){
-        fetch('https://eonet.sci.gsfc.nasa.gov/api/v3/categories', {
+    async obtenerComentarios(){
+        try{
+            let respuesta = await fetch('https://eonet.sci.gsfc.nasa.gov/api/v3/categories', {method: 'GET'});
+            if(respuesta.status === 200){
+                console.log(respuesta);
+                let data = await respuesta.json();
+                let categories = data.categories;
+                console.log(categories);
+            }else{
+                alert("Error en el servidor!!!");
+            }
+        }catch(e){
+            
+        }
+        /*fetch('https://eonet.sci.gsfc.nasa.gov/api/v3/categories', {
             method: 'GET'
         })
         .then(function(respuesta){
-            console.log();
             if(respuesta.status === 200){
                 respuesta.json().then((data) => {
                     console.log(data.categories);
@@ -17,7 +29,7 @@ class Comentario{
         })
         .catch( (response) => {
             console.log('Desde catch ',response);
-        });
+        });*/
     }
 }
 export default Comentario;
