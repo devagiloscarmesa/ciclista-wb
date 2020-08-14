@@ -1,5 +1,6 @@
 import Comentario from './Comentario';
 import 'bootstrap';
+import '@fortawesome/fontawesome-free/js/all'
 import './sass/_custom.scss';
 
 
