@@ -1,5 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
 
+$mayusculas: uppercase;
+$ROJO_N1 : rgb(207, 49, 49);
+
 body {
     background-color: #fdfcfc;
     padding: 2%;
@@ -18,9 +21,13 @@ header {
 
     #ctn_banner {
         margin-top: 10px;
-
+        text-shadow: 2px 2px #795548;
         img{
             max-height: 500px;
+        }
+
+        .text-primary {
+            color: #28a745 !important;
         }
 
         .card-title {
@@ -41,6 +48,19 @@ header {
             font-size: 2.8rem;
             font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
                 sans-serif;
+        }
+    }
+}
+
+section{
+    #main{
+        #mis-tabs{
+            #mejores-tiempos{
+                & .nombre_deportista{
+                    text-transform: $mayusculas;
+                    color: $ROJO_N1
+                }
+            }
         }
     }
 }
