@@ -1,82 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto de ciclistas con webpack y babel</title>
 </head>
+
 <body>
     <section class="container-fluid">
         <header>
             <section class="row">
-                <article class="col-1 text-center"> 
-                  <img class="img-fluid" id="logo" alt="Logo Conjunto Residencial" src='imagenes/bicicleta-logo.png'/>
+                <article class="col-1 text-center">
+                    <img class="img-fluid" id="logo" alt="Logo Conjunto Residencial"
+                        src='imagenes/bicicleta-logo.png' />
                 </article>
-              <article class="col-7">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Ciclismo</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Contactanos</a>
-                      </li>
-                    </ul>
-                  </div>
-                </nav>
-              </article>
-              <article class="col-4">
-                <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar contenido" aria-label="Search">
-                  <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
-              </article>
+                <article class="col-7">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Ciclismo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contactanos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </article>
+                <article class="col-4">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar contenido"
+                            aria-label="Search">
+                        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </article>
             </section>
             <section class="row" id="ctn_banner">
-              <article class="col-lg-12">
-                <img class="img-fluid card-img" src="imagenes/baner-ciclista.jpg"/>
-                <div class="card-title text-primary">Just Enjoy</div>
-                <div class="card-title-1 text-primary">The Ride</div>
-              </article>
+                <article class="col-lg-12">
+                    <img class="img-fluid card-img" src="imagenes/baner-ciclista.jpg" />
+                    <div class="card-title text-primary">Just Enjoy</div>
+                    <div class="card-title-1 text-primary">The Ride</div>
+                </article>
             </section>
         </header>
 
         <section id="main">
             <section class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
-                  <li class="nav-item bg-nav">
-                    <a class="nav-link" data-toggle="tab" href="#registro-tiempos" id="registro-tiempos-tab">Registro de tiempos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#promedios" id="promedios-tab">Promedios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#mejores-tiempos" id="mejores-tiempos-tab">Mejores Tiempos</a>
-                  </li>
+                    <li class="nav-item bg-nav">
+                        <a class="nav-link" data-toggle="tab" href="#registro-tiempos"
+                            id="registro-tiempos-tab">Registro de tiempos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#promedios" id="promedios-tab">Promedios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#mejores-tiempos"
+                            id="mejores-tiempos-tab">Mejores Tiempos</a>
+                    </li>
                 </ul>
             </section>
             <section class="card-body">
                 <section class="tab-content" id="mis-tabs">
-                    <article class="tab-pane fade" id="registro-tiempos" role="tabpanel" aria-labelledby="registro-tiempos-tab">
-                        A
-                    </article>
-                       
-                    <article class="tab-pane fade" id="promedios" role="tabpanel" aria-labelledby="promedios-tab">
-                        
+                    <article class="tab-pane fade show active" id="registro-tiempos" role="tabpanel"
+                        aria-labelledby="registro-tiempos-tab">
+                        <div class="row">
+                            <!-- Input Buscar -->
+                            <div class="col-10">
+                                <form class="form">
+                                    <input class="form-control" type="search" placeholder="Filtrar" aria-label="Search">
+                                </form>
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-info" type="button" id="btn-filtrar"><i
+                                        class="fas fa-search-plus"></i></button>
+                                <button class="btn btn-info" type="button" id="btn-adicionar"><i
+                                        class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
                     </article>
 
-                    <article class="tab-pane fade show active" id="mejores-tiempos" role="tabpanel" aria-labelledby="mejores-tiempos-tab">
+                    <article class="tab-pane fade" id="promedios" role="tabpanel" aria-labelledby="promedios-tab">
+
+                    </article>
+
+                    <article class="tab-pane fade" id="mejores-tiempos" role="tabpanel"
+                        aria-labelledby="mejores-tiempos-tab">
                         <div class="card text-left bg-warning text-white">
                             <div class="card-header">
-                              Oro
+                                Oro
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -89,7 +111,7 @@
                                     </div>
 
                                     <div class="col-3 text-center">
-                                        <img class="img-fluid medalla_deportista" src="imagenes/medalla-oro.png"/>
+                                        <img class="img-fluid medalla_deportista" src="imagenes/medalla-oro.png" />
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +134,9 @@
                 <tbody></tbody>
             </table>
         </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/cpgTIcxt9Hs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cpgTIcxt9Hs" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 </body>
+
 </html>
