@@ -1,13 +1,46 @@
 @import "~bootstrap/scss/bootstrap";
 
-body{
+body {
     background-color: #fdfcfc;
     padding: 2%;
-
-    
 }
 
-.bg-nav{
+.bg-nav {
     color: rgb(10, 10, 243);
 }
 
+header {
+    #logo{
+        width: 80%;
+        min-width: 20px;
+    }
+
+
+    #ctn_banner {
+        margin-top: 10px;
+
+        img{
+            max-height: 500px;
+        }
+
+        .card-title {
+            position: absolute;
+            top: 6rem;
+            right: 6rem;
+            color: white;
+            font-size: 2.5rem;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+                sans-serif;
+        }
+
+        .card-title-1 {
+            position: absolute;
+            top: 10rem;
+            right: 6rem;
+            color: white;
+            font-size: 2.8rem;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+                sans-serif;
+        }
+    }
+}

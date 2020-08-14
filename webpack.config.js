@@ -40,14 +40,14 @@ module.exports = {
         loader: 'html-loader',        
       }, 
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|jpeg)$/,
         use: [
           {
             loader : 'file-loader',
             options : {
-              // name : '[name].[ext]', 
-              // outputPath : 'img/', 
-              // publicPath : 'img/'
+               //name : '[name].[ext]', 
+               outputPath : 'img/', 
+               publicPath : 'img/'
             }
           }
         ]
@@ -57,6 +57,7 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
         template: './src/index.html', 
+        favicon: './src/imagenes/favicon-32x32.png', 
         minify:  {
             collapseWhitespace: false,
             removeComments: true,
