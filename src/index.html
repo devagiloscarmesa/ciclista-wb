@@ -84,8 +84,8 @@
                             <div class="col-2">
                                 <button class="btn btn-info" type="button" id="btn-filtrar"><i
                                         class="fas fa-search-plus"></i></button>
-                                <button data-toggle="modal" data-target="#modal-registro" class="btn btn-info" type="button" id="btn-adicionar"><i
-                                        class="fas fa-plus"></i></button>
+                                <button data-toggle="modal" data-target="#modal-registro" class="btn btn-info"
+                                    type="button" id="btn-adicionar"><i class="fas fa-plus"></i></button>
                             </div>
                         </div>
                         <br />
@@ -160,7 +160,7 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/cpgTIcxt9Hs" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
-    
+
     <div class="modal fade" id="modal-registro" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -170,8 +170,78 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body"> 
-
+                <div class="modal-body">
+                    <form id="frm-registro-ciclista">
+                        <div class="card text-left bg-primary text-white">
+                            <div class="card-header">
+                                Datos del corredor
+                            </div>
+                            <div class="card-body">
+                                <article class="row">
+                                    <article class="col-6">
+                                      <div class="form-group">
+                                        <label for="nombre-corredor">Nombre (*)</label>
+                                        <input type="text" class="form-control" id="nombre-corredor"
+                                          placeholder="Nombre del corredor" required />
+                                      </div>
+                                    </article>
+                                </article>
+                            </div>
+                        </div>
+                        
+                        <div class="card text-left bg-ligth mt-3">
+                            <div class="card-header">
+                                Registro de tiempos
+                            </div>
+                            <div class="card-body">
+                                <article class="row">
+                                    <article class="col-6">
+                                      <div class="form-group">
+                                        <label for="tiempo1">Carrera 1 (en minutos) *</label>
+                                        <input type="text" class="form-control" id="tiempo1"
+                                          placeholder="Tiempo de la carrera 1" required />
+                                      </div>
+                                    </article>
+                                    <article class="col-6">
+                                        <div class="form-group">
+                                          <label for="tiempo2">Carrera 2 (en minutos) *</label>
+                                          <input type="text" class="form-control" id="tiempo2"
+                                            placeholder="Tiempo de la carrera 2" required />
+                                        </div>
+                                      </article>
+                                </article>
+                                <article class="row">
+                                    <article class="col-6">
+                                        <div class="form-group">
+                                            <label for="tiempo3">Carrera 3 (en minutos) *</label>
+                                            <input type="text" class="form-control" id="tiempo3"
+                                              placeholder="Tiempo de la carrera 3" required />
+                                          </div>
+                                    </article>
+                                    <article class="col-6">
+                                        <div class="form-group">
+                                            <label for="tiempo4">Carrera 4 (en minutos) *</label>
+                                            <input type="text" class="form-control" id="tiempo4"
+                                              placeholder="Tiempo de la carrera 4" required />
+                                          </div>
+                                    </article>
+                                </article>
+                                <article class="row">
+                                    <article class="col-6">
+                                        <div class="form-group">
+                                            <label for="tiempo5">Carrera 5 (en minutos) *</label>
+                                            <input type="text" class="form-control" id="tiempo5"
+                                              placeholder="Tiempo de la carrera 5" required />
+                                          </div>
+                                    </article>
+                                </article>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+                    <button type="button" class="btn btn-primary" id="btn-guardar-registro-ciclista">Guardar</button>
                 </div>
             </div>
         </div>
