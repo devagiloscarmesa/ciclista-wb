@@ -1,7 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-//C:\ruta1\ruta2\proyecto\build
-///home/ruta1/ruta2/proyecto
+
 module.exports = {
   entry: './src/app/index.js',
   output: {
@@ -13,7 +12,6 @@ module.exports = {
     open: true
   }, 
   module:{
-      //test: /\.css$/i,
     rules: [
       {
         test: /\.(scss)$/,
@@ -34,8 +32,26 @@ module.exports = {
           }
         }, {
           loader: 'sass-loader' // compiles Sass to CSS
-        }]
-      },
+        }
+      ]
+      }, 
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',        
+      }, 
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          {
+            loader : 'file-loader',
+            options : {
+              // name : '[name].[ext]', 
+              // outputPath : 'img/', 
+              // publicPath : 'img/'
+            }
+          }
+        ]
+      }, 
     ]
  }, 
   plugins: [
